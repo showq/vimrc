@@ -1,32 +1,44 @@
 let g:iswin=0
+let g:ismac=0
 if has('win16') || has('win32') || has('win64')
-    " let $HOME = expand('F://opensources/dotfiles')
-    " let $MYVIM = expand($HOME.'/.vim')
     let g:iswin = 1
-
-    cd ~
 elseif has('gui_macvim')
+    let g:ismac = 1
+endif
+
+if g:iswin
+    let $WORK = expand('D:/Dev/Htdocs')
+
+    " Special
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+
+    " Font
+    set guifont=Yahei_Mono:h12:cANSI
+    set gfw=Yahei_Mono:h12:cGB2312
+
+    " let $MYVIM = expand($HOME.'/.vim')
+elseif g:ismac
+    let $WORK = expand('~/Dev/Sites')
+
+    set guifont=Monaco:h\ 16
+
     set macmeta
 else
     " let $MYVIM = expand('~/.vim')
 endif
 
+cd $WORK
+
 set textwidth=79
 set rnu
+
 if exists('+colorcolumn')
     set colorcolumn=81
 endif
 
-" For chinese
+" For chinese encoding
 set fileencodings=utf-8,gbk,gb2312,big5,chinese,latin-1
-if g:iswin
-    source $VIMRUNTIME/delmenu.vim
-    source $VIMRUNTIME/menu.vim
-    " Font
-    set guifont=Yahei_Mono:h12:cANSI
-    set gfw=Yahei_Mono:h12:cGB2312
-    set shell=C:/Cygwin/bin/bash.exe
-endif
 
 " Better complete options to speed it up
 set complete=.,w,b,u,U
