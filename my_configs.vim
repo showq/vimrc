@@ -7,7 +7,7 @@ elseif has('gui_macvim')
 endif
 
 if g:iswin
-    let $WORK = expand('D:/Dev/Htdocs')
+    let $WORK = expand('D:/Development/Htdocs')
 
     " Special
     source $VIMRUNTIME/delmenu.vim
@@ -17,12 +17,10 @@ if g:iswin
     set guifont=Yahei_Mono:h12:cANSI
     set gfw=Yahei_Mono:h12:cGB2312
 
-    " let $MYVIM = expand($HOME.'/.vim')
 elseif g:ismac
     let $WORK = expand('~/Dev/Sites')
 
     set guifont=Monaco:h\ 16
-
     set macmeta
 else
     " let $MYVIM = expand('~/.vim')
@@ -73,3 +71,7 @@ vnoremap <s-tab> <gv
 
 " Quit window on <leader>q
 nnoremap <Leader>q :q<CR>
+
+" ------------------------------------------------------------------------------
+" My Plugins
+" ------------------------------------------------------------------------------
