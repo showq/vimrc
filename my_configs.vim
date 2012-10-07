@@ -21,10 +21,6 @@ else
     set guifont=Monaco:h\ 16
 endif
 
-if has('gui_macvim')
-    macmeta
-endif
-
 if exists("$WORK")
     cd $WORK
 endif
@@ -78,3 +74,7 @@ vnoremap <s-tab> <gv
 
 " Quit window on <leader>q
 nnoremap <Leader>q :q<CR>
+
+" ------------------------------------------------------------------------------
+" My Plugins
+" ------------------------------------------------------------------------------
