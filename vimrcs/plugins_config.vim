@@ -10,6 +10,7 @@
 """"""""""""""""""""""""""""""
 call pathogen#infect('~/.vim_runtime/sources_forked')
 call pathogen#infect('~/.vim_runtime/sources_non_forked')
+call pathogen#infect('~/.vim_runtime/sources_plugins')
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""""
@@ -48,13 +49,14 @@ let g:ctrlp_map = '<c-f>'
 map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
+let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 
 """"""""""""""""""""""""""""""
 " => Peepopen
 """"""""""""""""""""""""""""""
-map <leader>j :PeepOpen<cr>
+" map <leader>j :PeepOpen<cr>
 
 
 """"""""""""""""""""""""""""""

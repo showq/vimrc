@@ -78,3 +78,14 @@ nnoremap <Leader>q :q<CR>
 " ------------------------------------------------------------------------------
 " My Plugins
 " ------------------------------------------------------------------------------
+
+""""""""""""""""""""""""""""""
+" => Vim grep
+""""""""""""""""""""""""""""""
+let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
+set grepprg=/usr/bin/grep\ -nH
+
+iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+
+au FileType php setl shiftwidth=2
+au FileType php setl tabstop=2
