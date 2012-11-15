@@ -45,7 +45,47 @@ set fileencodings=utf-8,gbk,gb2312,big5,chinese,latin-1
 set complete=.,w,b,u,U
 
 " ------------------------------------------------------------------------------
-" My Key map
+" My Settings
+" ------------------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------------------
+" My Plugins
+" ------------------------------------------------------------------------------
+
+" TODO
+" Tagbar
+" Supertab
+" 
+
+" ------------------------------------------------------------------------------
+" My FileTypes
+" ------------------------------------------------------------------------------
+
+" PHP
+au FileType php setl shiftwidth=2
+au FileType php setl tabstop=2
+
+" TODO analyse drupal.vim
+" Drupal
+if has("autocmd")
+  " Drupal *.module and *.install files.
+  augroup module
+    autocmd BufRead,BufNewFile *.module set filetype=php
+    autocmd BufRead,BufNewFile *.install set filetype=php
+    autocmd BufRead,BufNewFile *.test set filetype=php
+    autocmd BufRead,BufNewFile *.inc set filetype=php
+    autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
+  augroup END
+endif
+
+" Obj-C
+
+" XHTML+CSS
+
+" ------------------------------------------------------------------------------
+" My key map
 " ------------------------------------------------------------------------------
 " Fixes common typos
 command W w
@@ -75,17 +115,4 @@ vnoremap <s-tab> <gv
 " Quit window on <leader>q
 nnoremap <Leader>q :q<CR>
 
-" ------------------------------------------------------------------------------
-" My Plugins
-" ------------------------------------------------------------------------------
-"
-"
-"
-"
-"
-" ------------------------------------------------------------------------------
-" My FileType
-" ------------------------------------------------------------------------------
-
-au FileType php setl shiftwidth=2
-au FileType php setl tabstop=2
+" TODO Switch nu, rnu
