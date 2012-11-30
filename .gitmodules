@@ -1,0 +1,6 @@
+[submodule "sources_plugins/taglist"]
+	path = sources_plugins/taglist
+	url = https://github.com/vim-scripts/taglist.vim
+[submodule "sources_plugins/zencoding-vim"]
+	path = sources_plugins/zencoding-vim
+	url = http://github.com/mattn/zencoding-vim
