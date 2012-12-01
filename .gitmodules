@@ -10,3 +10,6 @@
 [submodule "sources_plugins/syntastic"]
 	path = sources_plugins/syntastic
 	url = https://github.com/scrooloose/syntastic
+[submodule "sources_plugins/neocomplcache"]
+	path = sources_plugins/neocomplcache
+	url = https://github.com/Shougo/neocomplcache
