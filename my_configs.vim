@@ -54,7 +54,7 @@ set complete=.,w,b,u,U
 " ------------------------------------------------------------------------------
 
 " TODO
-" Tagbar
+" TagList
 " Supertab
 " 
 
@@ -116,3 +116,108 @@ vnoremap <s-tab> <gv
 nnoremap <Leader>q :q<CR>
 
 " TODO Switch nu, rnu
+
+" Some nice mapping to witch syntax ( useful if one mixes different languages
+" in one file )
+map <leader>1 :set syntax=c<CR>
+map <leader>2 :set syntax=xhtml<CR>
+map <leader>3 :set syntax=python<CR>
+map <leader>4 :set ft=javascript<CR>
+" map <leader>$ :syntax sync fromstart<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fileformats
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>fd :se ff=dos<CR>
+nmap <leader>fu :se ff=unix<CR>
+
+" Switch to current dir
+map <silent> <leader>cd :cd %:p:h<CR>
+
+" My information
+iab xname ShOwQ<showqonline@gmail.com>
+
+" Enable syntax
+if has("autocmd") && exists("+omnifunc")
+    autocmd Filetype *
+        \if &omnifunc == "" | 
+        \   setlocal omnifunc=syntaxcomplete#Complete |
+        \endif
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cscope setting
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("cscope")
+    if g:iswin
+        set csprg=cscope
+    else
+        set csprg=/usr/bin/cscope
+    endif
+    set csto=1
+    set cst
+    set nocsverb
+    " add any database in currrent directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    endif
+    set csverb
+endif
+
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TagList
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <leader>tl :TlistToggle<CR>
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Sort_Type = "name"
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth = 20
+let Tlist_Show_One_File = 1
+let Tlist_Close_On_Select = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filetype generic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " TODO
+  "
+  
+  """"""""""""""""""""""""""""
+  " HTML related
+  """"""""""""""""""""""""""""
+  let xml_use_xhtml = 1
+  
+  " To HTML
+  let html_use_css = 1
+  let html_number_lines = 0
+  let use_xhtml = 1
+
+
+  """"""""""""""""""""""""""""
+  " C/C++
+  """"""""""""""""""""""""""""
+  autocmd FileType c,cpp map <buffer> <leader><space> :make<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic
+"""
+let g:syntastic_check_on_open=1
+" phpcs, tab 4个空格，编码参考使用CodeIgniter风格
+let g:syntastic_phpcs_conf = "--tab-width=4 --standardCodeIgniter"
+
+
+
+
+
+
