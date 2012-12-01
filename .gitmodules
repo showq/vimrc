@@ -10,3 +10,6 @@
 [submodule "sources_plugins/neocomplcache"]
 	path = sources_plugins/neocomplcache
 	url = https://github.com/Shougo/neocomplcache
+[submodule "sources_plugins/taglist"]
+	path = sources_plugins/taglist
+	url = https://github.com/vim-scripts/taglist.vim
