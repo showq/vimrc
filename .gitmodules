@@ -4,3 +4,9 @@
 [submodule "sources_plugins/zencoding-vim"]
 	path = sources_plugins/zencoding-vim
 	url = http://github.com/mattn/zencoding-vim
+[submodule "sources_plugins/vim-align"]
+	path = sources_plugins/vim-align
+	url = http://github.com/tsaleh/vim-align
+[submodule "sources_plugins/syntastic"]
+	path = sources_plugins/syntastic
+	url = https://github.com/scrooloose/syntastic
