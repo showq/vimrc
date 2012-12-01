@@ -178,13 +178,36 @@ nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TagList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <leader>tl :TlistToggle<CR>
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
-let Tlist_Sort_Type = "name"
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 20
-let Tlist_Show_One_File = 1
+if g:iswin
+    let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+else
+    let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+endif
+let Tlist_Auto_Hightlight_Tag=1
+let Tlist_Auto_Open=0
+let Tlist_Auto_Update=1
 let Tlist_Close_On_Select = 1
+let Tlist_Compact_Format=0
+let Tlist_Display_Prototype=0
+let Tlist_Display_Tag_Scope=1
+let Tlist_Enable_Fold_Column=0
+let Tlist_Show_One_File = 1
+let Tlist_Use_Right_Window=1
+let Tlist_File_Fold_Auto_Close=0
+let Tlist_Hightlight_Tag_On_BufEnter=1
+let Tlist_GainFocus_On_ToggleOpen=1
+let Tlist_Inc_Winwidth=0
+let Tlist_Max_Submenu_Items=1
+let Tlist_Max_Tag_Length=30
+let Tlist_Process_File_Always=0
+let Tlist_Show_Menu=0
+let Tlist_Use_Horiz_Window=0
+let Tlist_WinWidth=30
+let Tlist_php_settings="php;c:class;i:interfaces;d:constant;f:function'
+let Tlist_Sort_Type="name"
+
+map <F12> :!ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --lanuages=php --recurse<CR>
+nnoremap <silent> <leader>tl :TlistToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -215,9 +238,6 @@ let Tlist_Close_On_Select = 1
 let g:syntastic_check_on_open=1
 " phpcs, tab 4个空格，编码参考使用CodeIgniter风格
 let g:syntastic_phpcs_conf = "--tab-width=4 --standardCodeIgniter"
-
-
-
 
 
 
