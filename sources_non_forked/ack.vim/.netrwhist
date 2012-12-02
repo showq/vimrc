@@ -1,2 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='D:\Development\Htdocs\php\www\zenlight\sbox\includes'
+let g:netrw_dirhist_2='C:\Users\Ryan\.vim_runtime'
+let g:netrw_dirhist_3='C:/Users/Ryan/.vim_runtime/vimrcs'
+let g:netrw_dirhist_4='D:\Development\Htdocs'
+let g:netrw_dirhist_5='C:\Users\Ryan\.vim_runtime'
+let g:netrw_dirhist_6='C:/Users/Ryan/.vim_runtime/vimrcs'

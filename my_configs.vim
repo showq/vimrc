@@ -26,7 +26,9 @@ else
     " let $MYVIM = expand('~/.vim')
 endif
 
-cd $WORK
+if exists("$WORK")
+    cd $WORK
+endif
 
 set textwidth=79
 set rnu
@@ -75,3 +77,10 @@ nnoremap <Leader>q :q<CR>
 " ------------------------------------------------------------------------------
 " My Plugins
 " ------------------------------------------------------------------------------
+
+
+""
+" => PHP section
+""
+au FileType php setl shiftwidth=2
+au FileType php setl tabstop=2
