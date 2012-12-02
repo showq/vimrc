@@ -16,3 +16,6 @@
 [submodule "sources_plugins/nerdcommenter"]
 	path = sources_plugins/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
+[submodule "sources_plugins/cscope"]
+	path = sources_plugins/cscope
+	url = https://github.com/vim-scripts/cscope.vim
