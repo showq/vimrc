@@ -96,6 +96,7 @@
 " ------------------------------------------------------------------------------
 " My FileTypes
 " ------------------------------------------------------------------------------
+    "{{{
     " PHP
     au FileType php setl shiftwidth=2
     au FileType php setl tabstop=2
@@ -113,25 +114,29 @@
         autocmd BufRead,BufNewFile *.view set filetype=php
       augroup END
     endif
+    "}}}
 
+    "{{{
     " Obj-C
 
-    " XHTML+CSS
+    "}}}
+
+    "{{{ XHTML+CSS
     "
-    """"""""""""""""""""
+
     " HTML related
-    """"""""""""""""""""
     let xml_use_xhtml = 1
     
     " To HTML
     let html_use_css = 1
     let html_number_lines = 0
     let use_xhtml = 1
+    "}}}
 
 
-    """"""""""""""""""""""""""""
+    "{{{
     " C/C++
-    """"""""""""""""""""""""""""
+    "}}}
     autocmd FileType c,cpp map <buffer> <leader><space> :make<CR>
 
     " My information
@@ -191,11 +196,4 @@
     """"""""""""""""""""
     map <silent> <leader>cd :cd %:p:h<CR>
 
-    " Enable syntax
-    if has("autocmd") && exists("+omnifunc")
-        autocmd Filetype *
-            \if &omnifunc == "" | 
-            \   setlocal omnifunc=syntaxcomplete#Complete |
-            \endif
-    endif
 
