@@ -155,7 +155,7 @@
     imap <C-l> <C-x><C-l>
 
     " Equal Size Windows
-    nmap <silent> <leader>w= :wincmd =<CR>
+    " nmap <silent> <leader>w= :wincmd =<CR>
     " Swap Windows
     nmap <silent> <leader>wx :wincmd x<CR>
 
@@ -197,3 +197,4 @@
     map <silent> <leader>cd :cd %:p:h<CR>
 
 
+    unmap <leader>t,
