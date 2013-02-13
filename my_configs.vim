@@ -8,7 +8,7 @@
     endif
 
     if g:iswin
-        let $WORK = expand('D:/Development/Htdocs')
+        let $WORK = expand('D:/Dev/Htdocs')
 
         " Special
         source $VIMRUNTIME/delmenu.vim
@@ -59,7 +59,7 @@
     " TagList
     """"""""""""""""""""
     if g:iswin
-        let Tlist_Ctags_Cmd = "D:/Development/Environment/ctags/ctags.exe"
+        let Tlist_Ctags_Cmd = "D:/Dev/Tools/ctags/ctags.exe"
     else
         let Tlist_Ctags_Cmd = '/usr/bin/ctags'
     endif
@@ -199,3 +199,6 @@
             \endif
     endif
 
+" 2013-02-11 
+" 修改一些vim中常用文件的位置，保持$HOME下的干净
+set viminfo='50,<1000,s100,:0,n~/.vim_runtime/temp_dirs/_viminfo
