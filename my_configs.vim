@@ -96,6 +96,7 @@
 " ------------------------------------------------------------------------------
 " My FileTypes
 " ------------------------------------------------------------------------------
+    "{{{
     " PHP
     au FileType php setl shiftwidth=2
     au FileType php setl tabstop=2
@@ -113,25 +114,29 @@
         autocmd BufRead,BufNewFile *.view set filetype=php
       augroup END
     endif
+    "}}}
 
+    "{{{
     " Obj-C
 
-    " XHTML+CSS
+    "}}}
+
+    "{{{ XHTML+CSS
     "
-    """"""""""""""""""""
+
     " HTML related
-    """"""""""""""""""""
     let xml_use_xhtml = 1
     
     " To HTML
     let html_use_css = 1
     let html_number_lines = 0
     let use_xhtml = 1
+    "}}}
 
 
-    """"""""""""""""""""""""""""
+    "{{{
     " C/C++
-    """"""""""""""""""""""""""""
+    "}}}
     autocmd FileType c,cpp map <buffer> <leader><space> :make<CR>
 
     " My information
@@ -150,7 +155,7 @@
     imap <C-l> <C-x><C-l>
 
     " Equal Size Windows
-    nmap <silent> <leader>w= :wincmd =<CR>
+    " nmap <silent> <leader>w= :wincmd =<CR>
     " Swap Windows
     nmap <silent> <leader>wx :wincmd x<CR>
 
@@ -191,14 +196,9 @@
     """"""""""""""""""""
     map <silent> <leader>cd :cd %:p:h<CR>
 
-    " Enable syntax
-    if has("autocmd") && exists("+omnifunc")
-        autocmd Filetype *
-            \if &omnifunc == "" | 
-            \   setlocal omnifunc=syntaxcomplete#Complete |
-            \endif
-    endif
 
-" 2013-02-11 
+" FIXED
 " 修改一些vim中常用文件的位置，保持$HOME下的干净
 set viminfo='50,<1000,s100,:0,n~/.vim_runtime/temp_dirs/_viminfo
+" 取消对,t,的快捷键，原因冲突
+unmap <leader>t,
