@@ -26,3 +26,6 @@
 	path = sources_plugins/cscope
 	url = https://github.com/vim-scripts/cscope.vim
     ignore = dirty
+[submodule "vim-multiple-cursors"]
+	path = vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
