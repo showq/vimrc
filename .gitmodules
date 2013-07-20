@@ -1,7 +1,3 @@
-[submodule "sources_plugins/zencoding-vim"]
-	path = sources_plugins/zencoding-vim
-	url = http://github.com/mattn/zencoding-vim
-    ignore = dirty
 [submodule "sources_plugins/vim-align"]
 	path = sources_plugins/vim-align
 	url = http://github.com/tsaleh/vim-align
@@ -26,6 +22,3 @@
 	path = sources_plugins/cscope
 	url = https://github.com/vim-scripts/cscope.vim
     ignore = dirty
-[submodule "vim-multiple-cursors"]
-	path = vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
