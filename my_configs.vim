@@ -61,7 +61,7 @@
     if g:iswin
         let Tlist_Ctags_Cmd = "D:/Dev/Tools/ctags/ctags.exe"
     else
-        let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+        let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
     endif
     let Tlist_Auto_Hightlight_Tag=1
     let Tlist_Close_On_Select = 1
