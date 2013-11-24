@@ -25,6 +25,8 @@
 [submodule "sources_plugins/zencoding-vim"]
 	path = sources_plugins/zencoding-vim
 	url = http://github.com/mattn/zencoding-vim.git
+    ignore = dirty
 [submodule "sources_plugins/vim-multiple-cursors"]
 	path = sources_plugins/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+    ignore = dirty
