@@ -140,7 +140,7 @@
     autocmd FileType c,cpp map <buffer> <leader><space> :make<CR>
 
     " My information
-    " iab xname ShOwQ<showqonline@gmail.com>
+    iab xname ShOwQ<showqonline@gmail.com>
 
 " ------------------------------------------------------------------------------
 " My map
@@ -173,7 +173,7 @@
     " Quick Switch filetype
     " Some nice mapping to witch syntax ( useful if one mixes different languages
     " in one file )
-    map <leader>1 :set syntax=c<CR>
+    map <leader>1 :set syntax=php<CR>
     map <leader>2 :set syntax=xhtml<CR>
     map <leader>3 :set syntax=python<CR>
     map <leader>4 :set ft=javascript<CR>
