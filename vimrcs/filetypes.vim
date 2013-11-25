@@ -52,3 +52,46 @@ function! CoffeeScriptFold()
     setl foldlevelstart=1
 endfunction
 au FileType coffee call CoffeeScriptFold()
+
+"{{{
+" PHP
+au FileType php setl shiftwidth=2
+au FileType php setl tabstop=2
+
+" TODO analyse drupal.vim
+" Drupal
+if has("autocmd")
+  " Drupal *.module and *.install files.
+  augroup drupalfile
+    autocmd BufRead,BufNewFile *.module set filetype=php
+    autocmd BufRead,BufNewFile *.install set filetype=php
+    autocmd BufRead,BufNewFile *.test set filetype=php
+    autocmd BufRead,BufNewFile *.inc set filetype=php
+    autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
+  augroup END
+endif
+"}}}
+
+"{{{
+" Obj-C
+
+"}}}
+
+"{{{ XHTML+CSS
+"
+
+" HTML related
+let xml_use_xhtml = 1
+
+" To HTML
+let html_use_css = 1
+" let html_number_lines = 0
+let use_xhtml = 1
+"}}}
+
+
+"{{{
+" C/C++
+"}}}
+autocmd FileType c,cpp map <buffer> <leader><space> :make<CR>

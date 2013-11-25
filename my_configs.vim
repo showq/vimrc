@@ -48,101 +48,17 @@
     " Better complete options to speed it up
     set complete=.,w,b,u,U
 
-" ------------------------------------------------------------------------------
-" My Plugins
-" Plugins List
-" ------------------------------------------------------------------------------
-" TagList
-" Syntastic
-" Supertab
-" VIM
-" ----------------------
-    """"""""""""""""""""
-    " TagList
-    """"""""""""""""""""
-    if g:iswin
-        let Tlist_Ctags_Cmd = "D:/Dev/Tools/ctags/ctags.exe"
-    else
-        let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-    endif
-    let Tlist_Auto_Hightlight_Tag=1
-    let Tlist_Close_On_Select = 1
-    let Tlist_Compact_Format=0
-    let Tlist_Enable_Fold_Column=0
-    let Tlist_Show_One_File = 1
-    let Tlist_Use_Right_Window=1
-    let Tlist_Hightlight_Tag_On_BufEnter=1
-    let Tlist_GainFocus_On_ToggleOpen=1
-    let Tlist_Inc_Winwidth=0
-    let Tlist_Max_Submenu_Items=1
-    let Tlist_Max_Tag_Length=30
-    let Tlist_Process_File_Always=0
-    let Tlist_Show_Menu=0
-    let Tlist_Use_Horiz_Window=0
-    let Tlist_WinWidth=30
-    let Tlist_php_settings="php;c:class;i:interfaces;d:constant;f:function"
-    let Tlist_Sort_Type="name"
-
-    if g:iswin
-        map <F12> :!ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --lanuages=php --recurse<CR>
-    endif
-    nnoremap <silent> <leader>tl :TlistToggle<CR>
-
-    """""""""""""""""""""
-    " Syntastic
-    """""""""""""""""""""
-    let g:syntastic_check_on_open=1
-    " phpcs, tab 4个空格，编码参考使用CodeIgniter风格
-    let g:syntastic_phpcs_conf = "--tab-width=4 --standardCodeIgniter"
-
-" ------------------------------------------------------------------------------
-" My FileTypes
-" ------------------------------------------------------------------------------
-    "{{{
-    " PHP
-    au FileType php setl shiftwidth=2
-    au FileType php setl tabstop=2
-
-    " TODO analyse drupal.vim
-    " Drupal
-    if has("autocmd")
-      " Drupal *.module and *.install files.
-      augroup drupalfile
-        autocmd BufRead,BufNewFile *.module set filetype=php
-        autocmd BufRead,BufNewFile *.install set filetype=php
-        autocmd BufRead,BufNewFile *.test set filetype=php
-        autocmd BufRead,BufNewFile *.inc set filetype=php
-        autocmd BufRead,BufNewFile *.profile set filetype=php
-        autocmd BufRead,BufNewFile *.view set filetype=php
-      augroup END
-    endif
-    "}}}
-
-    "{{{
-    " Obj-C
-
-    "}}}
-
-    "{{{ XHTML+CSS
-    "
-
-    " HTML related
-    let xml_use_xhtml = 1
-    
-    " To HTML
-    let html_use_css = 1
-    " let html_number_lines = 0
-    let use_xhtml = 1
-    "}}}
-
-
-    "{{{
-    " C/C++
-    "}}}
-    autocmd FileType c,cpp map <buffer> <leader><space> :make<CR>
 
     " My information
     iab xname ShOwQ<showqonline#gmail dot com>
+"""""""""""""""""""""""""
+" Special settings
+if g:iswin
+    let Tlist_Ctags_Cmd = "D:/Dev/Tools/ctags/ctags.exe"
+    map <F12> :!ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --lanuages=php --recurse<CR>
+else
+    let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+endif
 
 " ------------------------------------------------------------------------------
 " My map
