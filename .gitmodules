@@ -26,3 +26,6 @@
 	path = sources_plugins/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
     ignore = dirty
+[submodule "sources_plugins/emmet-vim"]
+	path = sources_plugins/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
