@@ -4,7 +4,7 @@
 " ------------------------------------------------------------------------------
     let g:iswin=0
 
-    if has('win16') || has('win32') || has('win64')
+    if has('win16') || has('win32')
         let g:iswin = 1
     endif
 
@@ -32,15 +32,12 @@
     set textwidth=79
     set nu
 
+    colorscheme desert
+
     if exists('+colorcolumn')
         set colorcolumn=81
     endif
 
-    if has("gui_running")
-        colorscheme peaksea
-    else
-        colorscheme desert
-    endif
 
     " For chinese encoding
     set fileencodings=utf-8,gbk,gb2312,big5,chinese,latin-1
@@ -120,3 +117,8 @@ endif
 set viminfo='50,<1000,s100,:0,n~/.vim_runtime/temp_dirs/_viminfo
 " 取消对,t,的快捷键，原因: 冲突
 unmap <leader>t,
+
+" TODO 
+" Add project: http://www.vim.org/scripts/script.php?script_id=69
+" Add Tagbar
+" exUtility: global search, symbol search, tag track..(Like IDE/Source Insight)

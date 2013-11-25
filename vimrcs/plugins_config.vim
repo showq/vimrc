@@ -51,7 +51,8 @@ map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_max_files = 0
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+" TODO: About drupal common ignore
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee\|files'
 let g:ctrlp_cache_dir = $HOME.'/.vim_runtime/temp_dirs/ctrlp'
 let g:ctrlp_dotfiles = 0
 
@@ -101,7 +102,7 @@ let Tlist_Process_File_Always=0
 let Tlist_Show_Menu=0
 let Tlist_Use_Horiz_Window=0
 let Tlist_WinWidth=30
-let Tlist_php_settings="php;c:class;i:interfaces;d:constant;f:function"
+let Tlist_php_settings="c:class;i:interfaces;f:function;php;d:constant"
 let Tlist_Sort_Type="name"
 
 nnoremap <silent> <leader>tl :TlistToggle<CR>
