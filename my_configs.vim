@@ -1,5 +1,6 @@
 " ------------------------------------------------------------------------------
 " My basic settings
+"
 " ------------------------------------------------------------------------------
     let g:iswin=0
 
@@ -49,11 +50,12 @@
 
 " ------------------------------------------------------------------------------
 " My Plugins
-" ------------------------------------------------------------------------------
 " Plugins List
+" ------------------------------------------------------------------------------
 " TagList
 " Syntastic
 " Supertab
+" VIM
 " ----------------------
     """"""""""""""""""""
     " TagList
@@ -105,7 +107,7 @@
     " Drupal
     if has("autocmd")
       " Drupal *.module and *.install files.
-      augroup module
+      augroup drupalfile
         autocmd BufRead,BufNewFile *.module set filetype=php
         autocmd BufRead,BufNewFile *.install set filetype=php
         autocmd BufRead,BufNewFile *.test set filetype=php
@@ -129,7 +131,7 @@
     
     " To HTML
     let html_use_css = 1
-    let html_number_lines = 0
+    " let html_number_lines = 0
     let use_xhtml = 1
     "}}}
 
@@ -140,7 +142,7 @@
     autocmd FileType c,cpp map <buffer> <leader><space> :make<CR>
 
     " My information
-    iab xname ShOwQ<showqonline@gmail.com>
+    iab xname ShOwQ<showqonline#gmail dot com>
 
 " ------------------------------------------------------------------------------
 " My map
@@ -200,5 +202,5 @@
 " FIXED
 " 修改一些vim中常用文件的位置，保持$HOME下的干净
 set viminfo='50,<1000,s100,:0,n~/.vim_runtime/temp_dirs/_viminfo
-" 取消对,t,的快捷键，原因冲突
+" 取消对,t,的快捷键，原因: 冲突
 unmap <leader>t,

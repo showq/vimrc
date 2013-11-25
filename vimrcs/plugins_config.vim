@@ -55,19 +55,11 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 let g:ctrlp_cache_dir = $HOME.'/.vim_runtime/temp_dirs/ctrlp'
 let g:ctrlp_dotfiles = 0
 
-
-""""""""""""""""""""""""""""""
-" => Peepopen
-""""""""""""""""""""""""""""""
-" map <leader>j :PeepOpen<cr>
-
-
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
 """"""""""""""""""""""""""""""
 ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
 snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
-
 
 """"""""""""""""""""""""""""""
 " => Vim grep
