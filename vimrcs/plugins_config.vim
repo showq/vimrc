@@ -102,7 +102,7 @@ let Tlist_Process_File_Always=0
 let Tlist_Show_Menu=0
 let Tlist_Use_Horiz_Window=0
 let Tlist_WinWidth=30
-let Tlist_php_settings="c:class;i:interfaces;f:function;php;d:constant"
+let Tlist_php_settings="php;c:class;i:interfaces;f:function;d:constant"
 let Tlist_Sort_Type="name"
 
 nnoremap <silent> <leader>tl :TlistToggle<CR>
@@ -114,4 +114,7 @@ nnoremap <silent> <leader>tl :TlistToggle<CR>
 let g:syntastic_check_on_open=1
 " phpcs, tab 4个空格，编码参考使用CodeIgniter风格
 let g:syntastic_phpcs_conf = "--tab-width=4 --standardCodeIgniter"
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
 
