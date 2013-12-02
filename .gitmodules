@@ -35,3 +35,6 @@
 [submodule "sources_plugins/vim-css-syntax"]
 	path = sources_plugins/vim-css-syntax
 	url = https://github.com/fremff/vim-css-syntax
+[submodule "sources_plugins/exUtility"]
+	path = sources_plugins/exUtility
+	url = https://github.com/vim-scripts/exUtility
