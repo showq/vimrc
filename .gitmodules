@@ -38,3 +38,4 @@
 [submodule "sources_plugins/exUtility"]
 	path = sources_plugins/exUtility
 	url = https://github.com/vim-scripts/exUtility
+    ignore = dirty
