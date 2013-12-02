@@ -117,4 +117,5 @@ let g:syntastic_phpcs_conf = "--tab-width=4 --standardCodeIgniter"
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 
+let g:syntastic_auto_jump=1
 
