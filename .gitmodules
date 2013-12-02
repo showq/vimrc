@@ -32,6 +32,3 @@
 [submodule "sources_plugins/vim-project"]
 	path = sources_plugins/vim-project
 	url = https://github.com/amiorin/vim-project
-[submodule "sources_plugins/Better-CSS-Syntax-for-Vim"]
-	path = sources_plugins/Better-CSS-Syntax-for-Vim
-	url = https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim/
