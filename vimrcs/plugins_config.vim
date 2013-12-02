@@ -116,11 +116,10 @@ let g:syntastic_check_on_open=1
 let g:syntastic_phpcs_conf = "--tab-width=4 --standardCodeIgniter"
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-
 let g:syntastic_auto_jump=1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Css3
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:css_default_sync == 1
+let g:css_default_sync = 1
