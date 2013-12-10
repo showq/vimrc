@@ -3,9 +3,15 @@
 "
 " ------------------------------------------------------------------------------
     let g:iswin=0
+    let g:isunix=0
+    let g:ismac=0
 
     if has('win16') || has('win32')
         let g:iswin = 1
+    elseif has('unix')
+        let g:isunix = 1
+    elseif has('unix')
+        let g:ismac = 1
     endif
 
     if g:iswin
@@ -18,7 +24,12 @@
         " Font
         set guifont=Yahei_Mono:h12:cANSI
         set gfw=Yahei_Mono:h12:cGB2312
-    else
+    elseif g:isunix
+        let $WORK = expand('~/Websites')
+
+        " Font
+        set guifont=Monaco:h\ 12
+    elseif g:ismac
         let $WORK = expand('~/Dev/Sites')
 
         " Font
