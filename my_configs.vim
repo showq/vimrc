@@ -28,7 +28,7 @@
         let $WORK = expand('~/Websites')
 
         " Font
-        set guifont=Monaco:h\ 12
+        set guifont=Monospace:h12
     elseif g:ismac
         let $WORK = expand('~/Dev/Sites')
 
