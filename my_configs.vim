@@ -16,18 +16,15 @@
 
     if g:iswin
         let $WORK = expand('D:/Dev/Htdocs')
-
         " Special
         source $VIMRUNTIME/delmenu.vim
         source $VIMRUNTIME/menu.vim
-
         " Font
         set guifont=Yahei_Mono:h12:cANSI
         set gfw=Yahei_Mono:h12:cGB2312
     elseif g:isunix
         let $WORK = expand('~/Websites')
-        " Font
-        set guifont=Monospace:h12
+        set guifont=Monospace\ 12
     elseif g:ismac
         let $WORK = expand('~/Dev/Sites')
         " Font
