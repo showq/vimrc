@@ -29,12 +29,15 @@
 [submodule "sources_plugins/emmet-vim"]
 	path = sources_plugins/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+    ignore = dirty
 [submodule "sources_plugins/vim-project"]
 	path = sources_plugins/vim-project
 	url = https://github.com/amiorin/vim-project
+    ignore = dirty
 [submodule "sources_plugins/vim-css-syntax"]
 	path = sources_plugins/vim-css-syntax
 	url = https://github.com/fremff/vim-css-syntax
+    ignore = dirty
 [submodule "sources_plugins/exUtility"]
 	path = sources_plugins/exUtility
 	url = https://github.com/vim-scripts/exUtility

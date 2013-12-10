@@ -34,10 +34,10 @@ map <leader>f :MRU<CR>
 " => YankRing
 """"""""""""""""""""""""""""""
 if has("win16") || has("win32")
-    " Don't do anything
-    let g:yankring_history_file = '/.vim_runtime/temp_dirs/yankring_history'
+  " Don't do anything
+  let g:yankring_history_file = '/.vim_runtime/temp_dirs/yankring_history'
 else
-    let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
+  let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
 endif
 
 
@@ -143,14 +143,14 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
+      \ 'default' : '',
+      \ 'vimshell' : $HOME.'/.vimshell_hist',
+      \ 'scheme' : $HOME.'/.gosh_completions'
+      \ }
 
 " Define keyword.
 if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
+  let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
@@ -209,3 +209,14 @@ endif
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" exUtility
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <F7> :ExtsToggle<CR>
+nnoremap <silent> <Leader>ts :ExtsSelectToggle<CR>
+nnoremap <silent> <Leader>tt :ExtsStackToggle<CR>
+map <silent> <Leader>] :ExtsGoDirectly<CR>
+map <silent> <Leader>[ :PopTagStack<CR>
+let g:exTS_backto_editbuf = 0
+let g:exTS_close_when_selected = 1

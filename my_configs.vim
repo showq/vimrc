@@ -3,9 +3,15 @@
 "
 " ------------------------------------------------------------------------------
     let g:iswin=0
+    let g:isunix=0
+    let g:ismac=0
 
-    if has('win16') || has('win32')
+    if has('win32')
         let g:iswin = 1
+    elseif has('gui_macvim')
+        let g:ismac = 1
+    else
+        let g:isunix = 1
     endif
 
     if g:iswin
@@ -18,9 +24,12 @@
         " Font
         set guifont=Yahei_Mono:h12:cANSI
         set gfw=Yahei_Mono:h12:cGB2312
-    else
+    elseif g:isunix
+        let $WORK = expand('~/Websites')
+        " Font
+        set guifont=Monospace:h12
+    elseif g:ismac
         let $WORK = expand('~/Dev/Sites')
-
         " Font
         set guifont=Monaco:h\ 16
     endif
@@ -53,7 +62,9 @@
 if g:iswin
     let Tlist_Ctags_Cmd = "D:/Dev/Tools/ctags/ctags.exe"
     map <F12> :!ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --lanuages=php --recurse<CR>
-else
+elseif g:unix
+
+elseif g:macvim
     let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 endif
 
