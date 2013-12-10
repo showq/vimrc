@@ -144,8 +144,3 @@ endfunc
 func! CurrentFileDir(cmd)
     return a:cmd . " " . expand("%:p:h") . "/"
 endfunc
-    colorscheme desert
-    if has("gui_running")
-        colorscheme 
-    else
-    endif
