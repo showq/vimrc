@@ -13,7 +13,7 @@ set background=dark
 if has("gui_running")
     colorscheme peaksea
 else
-    colorscheme ir_black
+    colorscheme desert
 endif
 
 " Set font according to system
