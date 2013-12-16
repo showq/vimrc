@@ -31,12 +31,12 @@
         set guifont=Monaco:h\ 16
     endif
 
-if exists("$WORK")
-  if g:iswin
-  else:
-    cd $WORK
-  endif
-endif
+    if exists("$WORK")
+        if g:iswin
+        else:
+          cd $WORK
+        endif
+    endif
 
     set textwidth=79
     set nu
