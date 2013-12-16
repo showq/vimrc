@@ -15,7 +15,7 @@
     endif
 
     if g:iswin
-        let $WORK = expand('D:/Dev/Htdocs')
+        let $WORK = expand('D:/Development/Htdocs')
         " Special
         source $VIMRUNTIME/delmenu.vim
         source $VIMRUNTIME/menu.vim
@@ -31,9 +31,12 @@
         set guifont=Monaco:h\ 16
     endif
 
-    if exists("$WORK")
-        cd $WORK
-    endif
+if exists("$WORK")
+  if g:iswin
+  else:
+    cd $WORK
+  endif
+endif
 
     set textwidth=79
     set nu
@@ -57,13 +60,16 @@
 """""""""""""""""""""""""
 " Special settings
 if g:iswin
-    let Tlist_Ctags_Cmd = "D:/Dev/Tools/ctags/ctags.exe"
+    let Tlist_Ctags_Cmd = "D:/Development/Tools/ctags/ctags.exe"
     map <F12> :!ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --lanuages=php --recurse<CR>
 elseif g:unix
 
 elseif g:macvim
     let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 endif
+
+language chinese_china
+language message zh_CN.utf-8
 
 " ------------------------------------------------------------------------------
 " My map
@@ -82,7 +88,6 @@ endif
     " Swap Windows
     nmap <silent> <leader>wx :wincmd x<CR>
 
-    language message zh_CN.UTF-8
 
     " Indent Tab
     noremap <Tab> v>
@@ -125,6 +130,7 @@ endif
 set viminfo='50,<1000,s100,:0,n~/.vim_runtime/temp_dirs/_viminfo
 " 取消对,t,的快捷键，原因: 冲突
 unmap <leader>t,
+unmap <leader>tt
 
 " TODO 
 " Add project: http://www.vim.org/scripts/script.php?script_id=69
