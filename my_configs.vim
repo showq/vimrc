@@ -33,7 +33,8 @@
 
     if exists("$WORK")
         if g:iswin
-        else:
+          " TODO 
+        else
           cd $WORK
         endif
     endif
