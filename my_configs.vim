@@ -35,7 +35,7 @@
         if g:iswin
           " TODO 
         else
-          cd $WORK
+          " cd $WORK
         endif
     endif
 
@@ -63,14 +63,14 @@
 if g:iswin
     let Tlist_Ctags_Cmd = "D:/Development/Tools/ctags/ctags.exe"
     map <F12> :!ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --lanuages=php --recurse<CR>
-elseif g:unix
+" elseif g:unix
 
-elseif g:macvim
+elseif g:ismac
     let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 endif
 
-language chinese_china
-language message zh_CN.utf-8
+" language chinese_china
+" language message zh_CN.utf-8
 
 " ------------------------------------------------------------------------------
 " My map

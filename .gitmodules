@@ -38,10 +38,6 @@
 	path = sources_plugins/vim-css-syntax
 	url = https://github.com/fremff/vim-css-syntax
     ignore = dirty
-[submodule "sources_plugins/exUtility"]
-	path = sources_plugins/exUtility
-	url = https://github.com/vim-scripts/exUtility
-    ignore = dirty
 [submodule "sources_plugins/gist-vim"]
 	path = sources_plugins/gist-vim
 	url = https://github.com/mattn/gist-vim
