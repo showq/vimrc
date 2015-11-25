@@ -36,7 +36,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = expand("<sfile>:t:r")
+let g:colors_name = "peaksea"
 
 " I don't want to abuse folding, but here folding is used to avoid confusion. 
 if &background=='light' 
@@ -281,7 +281,7 @@ elseif &background=='dark'
   hi ModeMsg		guifg=fg	guibg=#000080	gui=NONE
   hi VisualNOS		guifg=fg	guibg=#000080	gui=NONE
   hi SpecialKey		guifg=#b0d0f0	guibg=NONE	gui=NONE
-  hi NonText		guifg=#6080f0	guibg=#101010	gui=NONE
+  hi NonText		guifg=#202020	guibg=#202020	gui=NONE
   hi Directory		guifg=#80c0e0	guibg=NONE	gui=NONE
   hi ErrorMsg		guifg=#d0d090	guibg=#800000	gui=NONE
   hi MoreMsg		guifg=#c0e080	guibg=NONE	gui=NONE
@@ -294,7 +294,7 @@ elseif &background=='dark'
   hi DiffChange		guifg=NONE	guibg=#800080	gui=NONE
   hi DiffDelete		guifg=#6080f0	guibg=#202020	gui=NONE
   hi DiffText		guifg=#000000	guibg=#c0e080	gui=NONE
-  hi SignColumn		guifg=#e0e0e0	guibg=#008000	gui=NONE
+  hi SignColumn		guifg=#e0e0e0	guibg=#202020	gui=NONE
   hi IncSearch		guifg=White	guibg=DarkRed	gui=NONE
   hi StatusLineNC	guifg=#000000	guibg=#c0c0c0	gui=NONE
   hi VertSplit		guifg=#000000	guibg=#c0c0c0	gui=NONE
@@ -309,10 +309,10 @@ elseif &background=='dark'
       hi SpellRare	guifg=NONE	guibg=NONE	guisp=#f0c0f0
       hi SpellLocal	guifg=NONE	guibg=NONE	guisp=#c0d8f8
     endif
-    hi Pmenu		guifg=fg	guibg=#800080
-    hi PmenuSel		guifg=#000000	guibg=#d0d0d0	gui=NONE
-    hi PmenuSbar	guifg=fg	guibg=#000080	gui=NONE
-    hi PmenuThumb	guifg=fg	guibg=#008000	gui=NONE
+
+    hi Pmenu          guifg=#dddddd     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+    hi PmenuSel       guifg=#000000     guibg=#ffffff     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+    
     hi TabLine		guifg=fg	guibg=#008000	gui=NONE
     hi TabLineFill	guifg=fg	guibg=#008000	gui=NONE
     hi TabLineSel	guifg=fg	guibg=NONE	gui=NONE
@@ -369,12 +369,12 @@ elseif &background=='dark'
     hi StatusLine	ctermfg=Black	    ctermbg=DarkCyan
     hi Question		ctermfg=Black	    ctermbg=DarkYellow
     hi Todo		ctermfg=DarkRed     ctermbg=DarkYellow
-    hi Folded		ctermfg=White	    ctermbg=DarkGreen
+    hi Folded		ctermfg=DarkGrey    ctermbg=DarkGrey
+    hi FoldColumn	ctermfg=DarkGrey    ctermbg=DarkGrey
     hi ModeMsg		ctermfg=Grey	    ctermbg=DarkBlue
     hi VisualNOS	ctermfg=Grey	    ctermbg=DarkBlue
     hi ErrorMsg		ctermfg=DarkYellow  ctermbg=DarkRed
     hi WildMenu		ctermfg=Black	    ctermbg=DarkYellow
-    hi FoldColumn	ctermfg=White	    ctermbg=DarkGreen
     hi SignColumn	ctermfg=White	    ctermbg=DarkGreen
     hi DiffText		ctermfg=Black	    ctermbg=DarkYellow
 
@@ -385,12 +385,12 @@ elseif &background=='dark'
         hi SpellRare	ctermfg=NONE	ctermbg=DarkMagenta
         hi SpellLocal	ctermfg=NONE	ctermbg=DarkGreen
       endif
-      hi Pmenu		ctermfg=fg	ctermbg=DarkMagenta
-      hi PmenuSel	ctermfg=Black	ctermbg=fg
-      hi PmenuSbar	ctermfg=fg	ctermbg=DarkBlue
-      hi PmenuThumb	ctermfg=fg	ctermbg=DarkGreen
-      hi TabLine	ctermfg=fg	ctermbg=DarkGreen	cterm=underline
-      hi TabLineFill	ctermfg=fg	ctermbg=DarkGreen	cterm=underline
+
+      hi Pmenu		ctermfg=White	ctermbg=DarkGrey
+      hi PmenuSel	ctermfg=Black	ctermbg=White
+
+      hi TabLine	ctermfg=fg	ctermbg=Black   	cterm=underline
+      hi TabLineFill	ctermfg=fg	ctermbg=Black   	cterm=underline
       hi CursorColumn	ctermfg=NONE	ctermbg=DarkRed
 
       hi TabLineSel	ctermfg=fg	ctermbg=bg
@@ -524,8 +524,8 @@ elseif &background=='dark'
     hi Title		ctermfg=219	ctermbg=NONE	cterm=NONE
     hi WarningMsg	ctermfg=209	ctermbg=NONE	cterm=NONE
     hi WildMenu		ctermfg=16	ctermbg=186	cterm=NONE
-    hi Folded		ctermfg=NONE	ctermbg=22	cterm=NONE
-    hi FoldColumn	ctermfg=254	ctermbg=28	cterm=NONE
+    hi Folded		ctermfg=NONE	ctermbg=DarkGrey cterm=NONE
+    hi FoldColumn	ctermfg=DarkGrey ctermbg=DarkGrey cterm=NONE
     hi DiffAdd		ctermfg=NONE	ctermbg=18	cterm=NONE
     hi DiffChange	ctermfg=NONE	ctermbg=90	cterm=NONE
     hi DiffDelete	ctermfg=69	ctermbg=234	cterm=NONE
@@ -552,13 +552,14 @@ elseif &background=='dark'
           hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
         endif
       endif
-      hi Pmenu		ctermfg=fg	ctermbg=90
-      hi PmenuSel	ctermfg=16	ctermbg=252	cterm=NONE
-      hi PmenuSbar	ctermfg=fg	ctermbg=18	cterm=NONE
-      hi PmenuThumb	ctermfg=fg	ctermbg=28	cterm=NONE
-      hi TabLine	ctermfg=fg	ctermbg=28	cterm=NONE
-      hi TabLineFill	ctermfg=fg	ctermbg=28	cterm=NONE
+
+      hi Pmenu		ctermfg=White	ctermbg=DarkGrey
+      hi PmenuSel	ctermfg=Black	ctermbg=White	cterm=NONE
+
+      hi TabLine	ctermfg=fg	ctermbg=Black	cterm=NONE
+      hi TabLineFill	ctermfg=fg	ctermbg=Black	cterm=NONE
       hi TabLineSel	ctermfg=fg	ctermbg=NONE	cterm=NONE
+
       hi CursorColumn	ctermfg=NONE	ctermbg=88	cterm=NONE
       hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
       hi MatchParen	ctermfg=NONE	ctermbg=90

@@ -70,7 +70,7 @@ elseif g:macvim
 endif
 
 " language chinese_china
-" language message zh_CN.utf-8
+language message zh_CN.utf-8
 
 " ------------------------------------------------------------------------------
 " My map
